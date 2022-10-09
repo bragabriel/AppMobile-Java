@@ -5,11 +5,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import adapter.Adapter;
+import model.ProjetosMarinhos;
 
 public class TelaConferirProjetos extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+
+    //Array list com lista de projetos marinhos
+    private List<ProjetosMarinhos> listaProjetosMarinhos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +34,11 @@ public class TelaConferirProjetos extends AppCompatActivity {
         //Conversão de variáveis
         recyclerView = findViewById(R.id.recyclerView);
 
-        //Configurando o Adapter - Instanciando
-        Adapter adapter = new Adapter();
+        //chamando o método de listagem de projetos marinhos
+        this.criarProjetosMarinhos();
 
+        //Configurando o Adapter - Instanciando
+        Adapter adapter = new Adapter(listaProjetosMarinhos);
 
         //Configurando o recyclerView:
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -39,9 +48,29 @@ public class TelaConferirProjetos extends AppCompatActivity {
         //setando o layoutmanager
         recyclerView.setLayoutManager(layoutManager);
 
+        //tamanho de tela fixo
         recyclerView.setHasFixedSize(true);
 
         //colocando um adaptador
         recyclerView.setAdapter(adapter);
+    }
+
+    public void criarProjetosMarinhos(){
+
+        ProjetosMarinhos projeto = new ProjetosMarinhos("Projeto Tamar", "1988", "Ubatuba, SP");
+        listaProjetosMarinhos.add(projeto);
+
+        ProjetosMarinhos projeto2 = new ProjetosMarinhos("Projeto Verde Mar", "2014", "Rio de Janeiro, RJ");
+        listaProjetosMarinhos.add(projeto2);
+
+        ProjetosMarinhos projeto3 = new ProjetosMarinhos("Projeto Albatroz", "2013", "Ubatuba, SP");
+        listaProjetosMarinhos.add(projeto3);
+
+        ProjetosMarinhos projeto4 = new ProjetosMarinhos("Projeto Pescador Amigo", "2008", "São Paulo, Bertioga, Garujá e Santos");
+        listaProjetosMarinhos.add(projeto4);
+
+        ProjetosMarinhos projeto5 = new ProjetosMarinhos("Projeto Ecosurf", "2000", "Rio Grande do Sul, RS");
+        listaProjetosMarinhos.add(projeto5);
+
     }
 }

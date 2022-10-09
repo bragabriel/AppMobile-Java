@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.Adapter;
-import model.Criacao;
 import model.Usuario;
 
 public class TelaPrincipal extends AppCompatActivity {
@@ -31,7 +30,7 @@ public class TelaPrincipal extends AppCompatActivity {
     private TextView textViewUsuario;
     private Usuario usuario;
 
-    private List<Criacao> listaMovimentacoes = new ArrayList<>();
+    //private List<Criacao> listaMovimentacoes = new ArrayList<>();
     private Adapter adapterMovimentacao;
     private RecyclerView recyclerView;
 

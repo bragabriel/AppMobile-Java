@@ -10,9 +10,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ods14.R;
 
+import java.util.List;
+
+import model.ProjetosMarinhos;
+
 
 public class Adapter extends
         RecyclerView.Adapter<Adapter.MyViewHolder> {
+
+    private List<ProjetosMarinhos> listaProjetos;
+
+    //Construtor para receber a lista de projetos marinhos
+    public Adapter(List<ProjetosMarinhos> lista){
+        this.listaProjetos = lista;
+    }
 
     @NonNull
     @Override
@@ -28,15 +39,19 @@ public class Adapter extends
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        //Exibindo os itens
-        holder.nome.setText("Projeto TAMAR");
-        holder.ano.setText("2016");
-        holder.localizacao.setText("Ubatuba, SP");
+        //Exibindo os itens da lista
+        ProjetosMarinhos projetos = listaProjetos.get(position);
+
+        holder.nome.setText(projetos.getNome());
+        holder.ano.setText(projetos.getData());
+        holder.localizacao.setText(projetos.getLocalizacao());
+
+
     }
 
     @Override
     public int getItemCount() {
-        return 5; //quantidade de itens retornados na lista
+        return listaProjetos.size(); //quantidade de itens retornados na lista
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -53,49 +68,6 @@ public class Adapter extends
             localizacao = itemView.findViewById(R.id.textLocalizacao);
 
         }
-
-
-
-    /*private List<Criacao> criacoes;
-    private Context context;
-
-    public AdapterCriacao(List<Criacao> movimentacoes, Context context){
-        this.criacoes = movimentacoes;
-        this.context = context;
-    }
-
-    @Override
-    public AdapterCriacao.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_movimentacao, parent, false);
-
-        return new MyViewHolder(itemLista);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull AdapterCriacao.MyViewHolder holder, int position) {
-        Criacao criacao = criacoes.get(position);
-
-        holder.titulo.setText(criacao.getDescricao());
-        holder.valor.setText(String.valueOf(criacao.getValor()));
-        holder.categoria.setText(criacao.getCategoria());
-
-        if(criacao.getTipo() == "d" || criacao.getTipo().equals("d")){
-            holder.valor.setTextColor(context.getResources().getColor(R.color.colorAccent));
-            holder.valor.setText("- " + criacao.getValor());
-        }
-    }
-
-    @Override
-    public int getItemCount() {
-        return criacoes.size();
-    }
-
-    public class MyViewHolder extends  RecyclerView.ViewHolder{
-
-        TextView titulo, valor, categoria;
-
-*/
-
     }
 
 }
