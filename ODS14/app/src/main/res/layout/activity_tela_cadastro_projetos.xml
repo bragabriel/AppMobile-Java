@@ -24,29 +24,35 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="420dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Cidadeprojeto"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/spinnerEstado"
-        app:layout_constraintTop_toBottomOf="@+id/Nomeprojeto"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nomeprojeto" />
 
     <Spinner
         android:id="@+id/spinnerEstado"
-        android:layout_width="104dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
+        android:layout_marginEnd="50dp"
         android:autofillHints="Estadoprojeto"
         android:entries="@array/estados"
         app:layout_constraintBottom_toTopOf="@+id/Descricao"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        tools:layout_editor_absoluteX="7dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Nomeprojeto"
-        android:layout_width="421dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:hint="Nome do Projeto"
         android:textColor="@color/colorAccentCadastro"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
@@ -57,8 +63,10 @@
 
     <EditText
         android:id="@+id/Descricao"
-        android:layout_width="406dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Descrição"
         android:inputType="textPersonName"
@@ -76,9 +84,41 @@
         android:text="Cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="0.764" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Data"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Descricao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEstado"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="62dp"
+        android:text="Estado"
+        android:textColor="#ACABAB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerEstado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
