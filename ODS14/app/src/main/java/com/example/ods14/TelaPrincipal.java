@@ -19,7 +19,7 @@ import com.example.ods14.databinding.ActivityTelaPrincipalBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.AdapterCriacao;
+import adapter.Adapter;
 import model.Criacao;
 import model.Usuario;
 
@@ -32,7 +32,7 @@ public class TelaPrincipal extends AppCompatActivity {
     private Usuario usuario;
 
     private List<Criacao> listaMovimentacoes = new ArrayList<>();
-    private AdapterCriacao adapterMovimentacao;
+    private Adapter adapterMovimentacao;
     private RecyclerView recyclerView;
 
     @Override

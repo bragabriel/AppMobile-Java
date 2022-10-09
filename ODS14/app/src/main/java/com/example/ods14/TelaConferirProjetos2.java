@@ -1,12 +1,8 @@
 package com.example.ods14;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-
-import adapter.AdapterCriacao;
 
 public class TelaConferirProjetos2 extends AppCompatActivity {
 

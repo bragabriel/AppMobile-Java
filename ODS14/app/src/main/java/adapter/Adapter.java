@@ -1,6 +1,5 @@
 package adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,18 +8,55 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
-
-import model.Criacao;
-
 import com.example.ods14.R;
 
 
+public class Adapter extends
+        RecyclerView.Adapter<Adapter.MyViewHolder> {
 
-public class AdapterCriacao extends
-        RecyclerView.Adapter<AdapterCriacao.MyViewHolder> {
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-    private List<Criacao> criacoes;
+        //Recuperando a view com o item da lista
+        View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_projetos, parent, false);
+                        //LayoutInflater utilizado com o view
+
+        return new MyViewHolder(itemLista);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+        //Exibindo os itens
+        holder.nome.setText("Projeto TAMAR");
+        holder.ano.setText("2016");
+        holder.localizacao.setText("Ubatuba, SP");
+    }
+
+    @Override
+    public int getItemCount() {
+        return 5; //quantidade de itens retornados na lista
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+
+        TextView nome, ano, localizacao;
+
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            //Recuperando os dados que estão vindo do .xml
+            nome = itemView.findViewById(R.id.textTitulo);
+            ano = itemView.findViewById(R.id.textAno);
+            localizacao = itemView.findViewById(R.id.textLocalizacao);
+
+        }
+
+
+
+    /*private List<Criacao> criacoes;
     private Context context;
 
     public AdapterCriacao(List<Criacao> movimentacoes, Context context){
@@ -58,11 +94,8 @@ public class AdapterCriacao extends
 
         TextView titulo, valor, categoria;
 
+*/
 
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-        }
     }
 
 }
