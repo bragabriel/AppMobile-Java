@@ -86,8 +86,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewConferir"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/projetoconservacaomarinha" />
 
     <ImageView
@@ -96,17 +98,19 @@
         android:layout_height="170dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cadastrarprojetoconservacaomarinha" />
 
     <TextView
         android:id="@+id/textViewConferir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-condensed"
         android:onClick="abrirTelaConferirProjetos"
         android:text="Conferir os Projetos de\n Conservação Marinha"
@@ -121,7 +125,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-condensed"
         android:onClick="abrirTelaCadastrarProjeto"
         android:text="Cadastrar Novo Projeto \nde Conservação Marinha"
@@ -136,28 +140,28 @@
         android:id="@+id/imageView4"
         android:layout_width="356dp"
         android:layout_height="158dp"
-        android:layout_marginBottom="44dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.972"
         app:srcCompat="@drawable/ods" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
         android:fontFamily="sans-serif-condensed"
         android:onClick="abrirTelaODS"
         android:text="Conhecer as ODS's"
         android:textColor="@color/colorPrimaryH2"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.72" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
