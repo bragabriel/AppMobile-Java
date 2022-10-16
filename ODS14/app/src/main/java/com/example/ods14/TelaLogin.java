@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import helper.AutenticaUsuario;
+import helper.UsuarioDAO;
 import model.Usuario;
 
 public class TelaLogin extends AppCompatActivity {
@@ -19,6 +21,7 @@ public class TelaLogin extends AppCompatActivity {
     private EditText campoEmail;
     private EditText campoSenha;
     private Usuario usuario;
+    private AutenticaUsuario autenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +37,14 @@ public class TelaLogin extends AppCompatActivity {
             public void onClick(View view) {
                 if(verificaEmail()){
                     if(verificaSenha()){
-                        usuario = encontraUsuario();
-                        if(!usuario.getNome().equals("Errado")){
+
+                        //usuario = encontraUsuario(); Não estamos mais utilizando com lista
+
+                        autenticacao = new AutenticaUsuario();
+                        String email = campoEmail.getText().toString();
+                        String senha = campoSenha.getText().toString();
+
+                        if(autenticacao.valida(email, senha, getApplicationContext())){
                             Toast.makeText(TelaLogin.this, "Logado com sucesso!", Toast.LENGTH_SHORT).show();
                             abrirTelaPrincipal(view);
                         }else{
@@ -88,9 +97,22 @@ public class TelaLogin extends AppCompatActivity {
     }
 
     public void abrirTelaPrincipal(View view){
+
+        usuario = montarUsuario();
+
         //instancia um objeto de “Intent” e passa o objeto de “Usuário” para a activity “TelaPrincipal”.
         Intent intent = new Intent(this, TelaPrincipal.class);
         intent.putExtra("usuario", usuario );
         startActivity(intent);
+    }
+
+    public Usuario montarUsuario(){
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO(getApplicationContext());
+
+        String email = campoEmail.getText().toString();
+        String senha = campoSenha.getText().toString();
+
+        return usuarioDAO.buscar(email, senha);
     }
 }
