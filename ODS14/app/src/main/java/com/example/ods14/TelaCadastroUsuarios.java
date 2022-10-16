@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import helper.UsuarioDAO;
 import model.Usuario;
 
 public class TelaCadastroUsuarios extends AppCompatActivity {
@@ -38,9 +39,19 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
                             usuario.setNome(campoNome.getText().toString());
                             usuario.setEmail(campoEmail.getText().toString());
                             usuario.setSenha(campoSenha.getText().toString());
-                            MainActivity.listaUsuarios.add(usuario);
-                            finish();
-                            Toast.makeText(TelaCadastroUsuarios.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                            //Não vamos mais inserir na lista
+                            //MainActivity.listaUsuarios.add(usuario);
+
+                            //Vamos inserir no banco
+                            if(cadastrarUsuario()){
+                                //Deu certo
+                                finish();
+                                Toast.makeText(TelaCadastroUsuarios.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                            }else {
+                                //Não de certo o cadastro
+                                Toast.makeText(TelaCadastroUsuarios.this, "Erro ao realizar cadastro!", Toast.LENGTH_SHORT).show();
+                            }
 
                         }else{
                             Toast.makeText(TelaCadastroUsuarios.this, "Informe uma senha!",
@@ -80,5 +91,18 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
             return false;
 
         return true;
+    }
+
+    public boolean cadastrarUsuario(){
+
+        usuario = new Usuario();
+
+        usuario.setNome(campoNome.getText().toString());
+        usuario.setEmail(campoEmail.getText().toString());
+        usuario.setSenha(campoSenha.getText().toString());
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO(getApplicationContext());
+
+        return usuarioDAO.salvar(usuario);
     }
 }
