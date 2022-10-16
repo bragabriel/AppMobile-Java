@@ -12,16 +12,17 @@
         android:layout_width="349dp"
         android:layout_height="66dp"
         android:ems="10"
-        android:hint="Cidadeprojeto"
+        android:hint="Cidade do projeto"
         android:inputType="textPersonName"
         android:textColor="@color/colorAccentCadastro"
-        android:textColorHint="#FFFFFF"
+
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.276" />
 
     <Spinner
         android:id="@+id/spinnerEstado"
@@ -32,10 +33,11 @@
         android:entries="@array/estados"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.42" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Nomeprojeto"
@@ -43,13 +45,14 @@
         android:layout_height="52dp"
         android:hint="Nome do Projeto"
         android:textColor="@color/colorAccentCadastro"
-        android:textColorHint="#FFFFFF"
+
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.172" />
 
     <Button
         android:id="@+id/botaoCadastrar2"
@@ -60,34 +63,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
+        app:layout_constraintVertical_bias="0.938" />
 
     <TextView
         android:id="@+id/addprojeto"
-        android:layout_width="399dp"
-        android:layout_height="54dp"
+        android:layout_width="415dp"
+        android:layout_height="58dp"
         android:hint="Adicionar projeto"
         android:text="Adicionar projeto"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="30dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        tools:layout_editor_absoluteX="-4dp" />
 
     <EditText
         android:id="@+id/Descricao"
-        android:layout_width="208dp"
-        android:layout_height="114dp"
+        android:layout_width="205dp"
+        android:layout_height="99dp"
         android:ems="10"
         android:hint="Descrição do projeto"
         android:inputType="textPersonName"
         android:textColor="@color/colorAccentCadastro"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintVertical_bias="0.433" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="328dp"
+        android:layout_height="229dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.784"
+        app:mcv_selectionColor="#00F"
+        app:mcv_showOtherDates="all" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

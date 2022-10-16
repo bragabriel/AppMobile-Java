@@ -46,7 +46,7 @@
         app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162"
+        app:layout_constraintVertical_bias="0.114"
         app:srcCompat="@android:drawable/ic_dialog_email"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -61,14 +61,16 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.233" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="O que deseja fazer?"
         android:textColor="@color/colorPrimaryH1"
@@ -89,7 +91,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewConferir"
-        app:layout_constraintVertical_bias="0.0"
+
+        app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/projetoconservacaomarinha" />
 
     <ImageView
@@ -100,24 +103,26 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/cadastrarprojetoconservacaomarinha" />
 
     <TextView
         android:id="@+id/textViewConferir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="sans-serif-condensed"
         android:onClick="abrirTelaConferirProjetos"
         android:text="Conferir os Projetos de\n Conservação Marinha"
         android:textColor="@color/colorPrimaryH2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -125,14 +130,15 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="sans-serif-condensed"
         android:onClick="abrirTelaCadastrarProjeto"
         android:text="Cadastrar Novo Projeto \nde Conservação Marinha"
         android:textColor="@color/colorPrimaryH2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
+
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -143,10 +149,11 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.972"
+        app:layout_constraintVertical_bias="0.909"
         app:srcCompat="@drawable/ods" />
 
     <TextView
@@ -162,6 +169,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.72" />
+
+        app:layout_constraintVertical_bias="0.667" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
