@@ -10,7 +10,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static int VERSION = 1;
     public static String NOME_DB = "DB_ODS14";
     public static String TABELA_USUARIOS = "usuarios";
-    public static String TABELA_CRIACOES = "criacoes";
+    public static String TABELA_PROJETOS = "criacoes";
                         //Alias 'usuarios as TABELA_USUARIOS'
 
 
@@ -34,7 +34,22 @@ public class DBHelper extends SQLiteOpenHelper {
         }catch(Exception e){
             Log.i("INFO DB", "Erro ao criar a tabela usuários");
         }
+
+        sql = "CREATE TABLE IF NOT EXISTS " + TABELA_PROJETOS
+                + " (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "nome TEXT NOT NULL," +
+                "localizacao TEXT," +
+                "descricao TEXT, " +
+                "data TEXT);";
+        try {
+            sqLiteDatabase.execSQL(sql);
+            Log.i("INFO DB", "Sucesso ao criar a tabela projetos!");
+        } catch (Exception e) {
+            Log.i("INFO DB", "Erro ao criar a tabela projetos" + e.getMessage());
+        }
     }
+
+
 
     //Tem o app, atualiza a base de dados
     @Override //Caso lance uma nova versão do app e alteramos algo na tabela, então ele executa o upgrade (Alter tables do SQL por exemplo)

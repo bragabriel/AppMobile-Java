@@ -8,7 +8,7 @@
     tools:context=".TelaCadastroProjetos">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/CidadeProjeto"
         android:layout_width="349dp"
         android:layout_height="66dp"
         android:ems="10"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.42" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Nomeprojeto"
+        android:id="@+id/NomeProjeto"
         android:layout_width="345dp"
         android:layout_height="52dp"
         android:hint="Nome do Projeto"
@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0.172" />
 
     <Button
-        android:id="@+id/botaoCadastrar2"
+        android:id="@+id/btnCadastrarProjeto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cadastrar"
@@ -81,7 +81,7 @@
         tools:layout_editor_absoluteX="-4dp" />
 
     <EditText
-        android:id="@+id/Descricao"
+        android:id="@+id/DescricaoProjeto"
         android:layout_width="205dp"
         android:layout_height="99dp"
         android:ems="10"
@@ -95,18 +95,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433" />
-
-    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="328dp"
-        android:layout_height="229dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintVertical_bias="0.784"
-        app:mcv_selectionColor="#00F"
-        app:mcv_showOtherDates="all" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
