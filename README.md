@@ -1,7 +1,7 @@
 
 # Aplicativo _Mobile_ Android
 
-Aplicativo para o cadastro e a consulta de Projetos de Conservação Marinha, utilizando como tem a a ODS-14 (Objetivos de Desenvolvimento Sustentável).
+Aplicativo para o cadastro e a consulta de Projetos de Conservação Marinha, utilizando como tema a ODS-14 (Objetivos de Desenvolvimento Sustentável).
 
 ## Instalação
 
