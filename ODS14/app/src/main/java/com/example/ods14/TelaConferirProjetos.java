@@ -9,11 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.Adapter;
+import helper.ProjetoDAO;
 import model.ProjetosMarinhos;
 
 public class TelaConferirProjetos extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private ProjetoDAO projetoDAO;
 
     //Array list com lista de projetos marinhos
     private List<ProjetosMarinhos> listaProjetosMarinhos = new ArrayList<>();
@@ -31,11 +33,13 @@ public class TelaConferirProjetos extends AppCompatActivity {
         dataSet: dados
         */
 
+        projetoDAO = new ProjetoDAO(getApplicationContext());
+
         //Conversão de variáveis
         recyclerView = findViewById(R.id.recyclerView);
 
         //chamando o método de listagem de projetos marinhos
-        this.criarProjetosMarinhos();
+        listaProjetosMarinhos = projetoDAO.buscar();
 
         //Configurando o Adapter - Instanciando
         Adapter adapter = new Adapter(listaProjetosMarinhos);

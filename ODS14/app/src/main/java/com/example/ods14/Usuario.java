@@ -8,7 +8,6 @@ public class Usuario implements Serializable {
     private String nome;
     private String email;
     private String senha;
-    private double saldo;
 
     public int getId() {
         return id;
@@ -42,11 +41,4 @@ public class Usuario implements Serializable {
         this.senha = senha;
     }
 
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
 }

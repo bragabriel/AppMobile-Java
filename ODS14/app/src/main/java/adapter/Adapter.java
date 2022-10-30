@@ -43,10 +43,8 @@ public class Adapter extends
         ProjetosMarinhos projetos = listaProjetos.get(position);
 
         holder.nome.setText(projetos.getNome());
-        holder.ano.setText(projetos.getData());
+        holder.ano.setText(projetos.getDescricao());
         holder.localizacao.setText(projetos.getLocalizacao());
-
-
     }
 
     @Override

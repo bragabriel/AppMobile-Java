@@ -2,14 +2,16 @@ package model;
 
 public class ProjetosMarinhos {
 
+    private int id;
     private String nome;
-    private String data;
     private String localizacao;
+    private String descricao;
 
-    public ProjetosMarinhos(String nome, String data, String localizacao) {
+
+  public ProjetosMarinhos(String nome, String localizacao, String descricao) {
         this.nome = nome;
-        this.data = data;
         this.localizacao = localizacao;
+        this.descricao = descricao;
     }
 
     public String getNome() {
@@ -20,19 +22,27 @@ public class ProjetosMarinhos {
         this.nome = nome;
     }
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
     public String getLocalizacao() {
         return localizacao;
     }
 
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

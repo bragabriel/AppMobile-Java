@@ -7,43 +7,41 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import helper.ProjetoDAO;
+import model.ProjetosMarinhos;
 
 public class TelaCadastroProjetos extends AppCompatActivity{
 
-    private EditText Nomeprojeto;
-    private EditText Cidadeprojeto;
-    private EditText Estadoprojeto;
-    private EditText Descricao;
-    private Button botaoCadastrar2;
-    private projeto projeto;
+    private EditText nome_projeto;
+    private EditText cidade_projeto;
+    private EditText descricao_projeto;
+    private Button btn_cadastrar_projeto;
+    private ProjetosMarinhos projetosMarinhos;
+    private ProjetoDAO projetoDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro_projetos);
 
-        Nomeprojeto = findViewById(R.id.Nomeprojeto);
-        Cidadeprojeto = findViewById(R.id.Cidadeprojeto);
-        Estadoprojeto = findViewById(R.id.Estadoprojeto);
-        Descricao = findViewById(R.id.Descricao);
-        botaoCadastrar2 = findViewById(R.id.botaoCadastrar2);
+        nome_projeto = findViewById(R.id.NomeProjeto);
+        cidade_projeto = findViewById(R.id.CidadeProjeto);
+        descricao_projeto = findViewById(R.id.DescricaoProjeto);
+        btn_cadastrar_projeto = findViewById(R.id.btnCadastrarProjeto);
 
 
-        botaoCadastrar2.setOnClickListener(new View.OnClickListener() {
+        btn_cadastrar_projeto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(validaNomeprojeto()){
-                    if(validaCidadeprojeto()){
-                        if(validaEstadoprojeto()){
-                            projeto = new projeto();
-                            projeto.setNome(Nomeprojeto.getText().toString());
-                            projeto.setCidade(Cidadeprojeto.getText().toString());
-                            projeto.setEstado(Estadoprojeto.getText().toString());
-                            projeto.setDescricao(Descricao.getText().toString());
-                            //Viwprojetos.Listaprojeto.add(projeto);
-                            finish();
-                            Toast.makeText(TelaCadastroProjetos.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-
+                if(validaNomeProjeto()){
+                    if(validaCidadeProjeto()) {
+                        if(validaDescricaoProjeto()){
+                            projetosMarinhos = new ProjetosMarinhos(nome_projeto.getText().toString(), cidade_projeto.getText().toString(), descricao_projeto.getText().toString());
+                            projetoDAO = new ProjetoDAO(getApplicationContext());
+                            if (projetoDAO.salvar(projetosMarinhos)) {
+                                finish();
+                                Toast.makeText(TelaCadastroProjetos.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                            }
                         }else{
                             Toast.makeText(TelaCadastroProjetos.this, "Informe um Estado para o projeto!",
                                     Toast.LENGTH_SHORT).show();
@@ -56,37 +54,33 @@ public class TelaCadastroProjetos extends AppCompatActivity{
                     Toast.makeText(TelaCadastroProjetos.this, "Informe um nome para o projeto!",
                             Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }
 
-    public boolean validaNomeprojeto(){
-        String textoNome = Nomeprojeto.getText().toString();
+    public boolean validaNomeProjeto(){
+        String textoNome = nome_projeto.getText().toString();
         if(textoNome.isEmpty())
             return false;
 
         return true;
     }
 
-    public boolean validaCidadeprojeto(){
-        String textocidade = Cidadeprojeto.getText().toString();
-        if(textocidade.isEmpty())
+    public boolean validaCidadeProjeto(){
+        String textoCidade = cidade_projeto.getText().toString();
+        if(textoCidade.isEmpty())
             return false;
 
         return true;
     }
 
-    public boolean validaEstadoprojeto(){
-        String textoestado = Estadoprojeto.getText().toString();
-        if(textoestado.isEmpty())
+    public boolean validaDescricaoProjeto(){
+        String textoDescricao = descricao_projeto.getText().toString();
+        if(textoDescricao.isEmpty())
             return false;
 
         return true;
     }
 
-
-    }
-
-
-
-
+}
