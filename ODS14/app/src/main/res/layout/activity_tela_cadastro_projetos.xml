@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper"
     tools:context=".TelaCadastroProjetos">
 
     <EditText
@@ -16,7 +15,7 @@
         android:inputType="textPersonName"
         android:textColor="@color/colorAccentCadastro"
 
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.16"
@@ -46,7 +45,7 @@
         android:hint="Nome do Projeto"
         android:textColor="@color/colorAccentCadastro"
 
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.216"
@@ -72,14 +71,13 @@
         android:hint="Adicionar projeto"
         android:text="Adicionar projeto"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textColorHint="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.038"
         tools:layout_editor_absoluteX="-4dp" />
-
 
 
     <EditText
@@ -90,7 +88,7 @@
         android:hint="Descrição do projeto"
         android:inputType="textPersonName"
         android:textColor="@color/colorAccentCadastro"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
@@ -102,11 +100,14 @@
         android:id="@+id/calendarView"
         android:layout_width="171dp"
         android:layout_height="216dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751"
         app:mcv_selectionColor="#00F"
         app:mcv_showOtherDates="all"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="397dp" />
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
