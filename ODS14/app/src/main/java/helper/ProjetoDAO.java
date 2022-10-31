@@ -19,6 +19,7 @@ public class ProjetoDAO implements IProjetoDAO {
 
     public ProjetoDAO(Context context) {
         DBHelper db = new DBHelper(context);
+
         this.escreve = db.getWritableDatabase();
         this.le = db.getReadableDatabase();
     }
@@ -56,21 +57,24 @@ public class ProjetoDAO implements IProjetoDAO {
 
     @Override
     public List<ProjetosMarinhos> buscar() {
-        List<ProjetosMarinhos> projeto = new ArrayList<>();
-        String sql = "SELECT * FROM " + DBHelper.TABELA_PROJETOS+" WHERE id=?;";
 
-        String[] args ={"1"};
-        Cursor c = le.rawQuery(sql, args);
+        List<ProjetosMarinhos> projeto = new ArrayList<>();
+        //String sql = "SELECT * FROM " + DBHelper.TABELA_PROJETOS+" WHERE id=?;";
+        String sql = "SELECT * FROM " + DBHelper.TABELA_PROJETOS;
+
+        //String[] args ={"1"};
+        String[] args = {};
+
+        Cursor c = le.rawQuery(sql, null);
+
         while (c.moveToNext()) {
 
-            int idProjeto = c.getInt(c.getColumnIndex("id"));
-            String nome = c.getString(c.getColumnIndex("nome"));
-            String localizacao = c.getString(c.getColumnIndex("localizacao"));
-            String descricao = c.getString(c.getColumnIndex("descricao"));
+            int idProjeto = c.getInt(c.getColumnIndexOrThrow("id"));
+            String nome = c.getString(c.getColumnIndexOrThrow("nome"));
+            String localizacao = c.getString(c.getColumnIndexOrThrow("localizacao"));
+            String descricao = c.getString(c.getColumnIndexOrThrow("descricao"));
 
             ProjetosMarinhos projetoNovo = new ProjetosMarinhos(nome, localizacao, descricao);
-            int idUsuario = c.getInt(c.getColumnIndex("idUsuario"));
-            projetoNovo.setId(idUsuario);
 
             projeto.add(projetoNovo);
         }

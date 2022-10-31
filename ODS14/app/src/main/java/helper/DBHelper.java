@@ -10,7 +10,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static int VERSION = 1;
     public static String NOME_DB = "DB_ODS14";
     public static String TABELA_USUARIOS = "usuarios";
-    public static String TABELA_PROJETOS = "criacoes";
+    public static String TABELA_PROJETOS = "projetos";
                         //Alias 'usuarios as TABELA_USUARIOS'
 
 
@@ -26,7 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 + " (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nome TEXT NOT NULL," +
                 "email TEXT NOT NULL," +
-                "senha TEXT NOT NULL);";
+                "senha TEXT NOT NULL); ";
 
         try{
             sqLiteDatabase.execSQL(sql);
@@ -35,12 +35,13 @@ public class DBHelper extends SQLiteOpenHelper {
             Log.i("INFO DB", "Erro ao criar a tabela usuários");
         }
 
+
         sql = "CREATE TABLE IF NOT EXISTS " + TABELA_PROJETOS
                 + " (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nome TEXT NOT NULL," +
-                "localizacao TEXT," +
-                "descricao TEXT, " +
-                "data TEXT);";
+                "localizacao TEXT NOT NULL," +
+                "descricao TEXT NOT NULL);";
+
         try {
             sqLiteDatabase.execSQL(sql);
             Log.i("INFO DB", "Sucesso ao criar a tabela projetos!");
@@ -48,7 +49,6 @@ public class DBHelper extends SQLiteOpenHelper {
             Log.i("INFO DB", "Erro ao criar a tabela projetos" + e.getMessage());
         }
     }
-
 
 
     //Tem o app, atualiza a base de dados
