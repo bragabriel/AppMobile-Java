@@ -33,10 +33,12 @@ public class TelaConferirProjetos extends AppCompatActivity {
         dataSet: dados
         */
 
+
         projetoDAO = new ProjetoDAO(getApplicationContext());
 
         //Conversão de variáveis
         recyclerView = findViewById(R.id.recyclerView);
+
 
         //chamando o método de listagem de projetos marinhos
         listaProjetosMarinhos = projetoDAO.buscar();
@@ -57,6 +59,7 @@ public class TelaConferirProjetos extends AppCompatActivity {
 
         //colocando um adaptador
         recyclerView.setAdapter(adapter);
+
     }
 
     public void criarProjetosMarinhos(){
