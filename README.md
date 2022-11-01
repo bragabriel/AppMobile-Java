@@ -25,8 +25,10 @@ Para instalar nosso projeto, você precisa:
 - [@Hérica Cadoni](https://github.com/IamHerica)
 - [@Lucas Delfini](https://github.com/lucas41)
 
+## Orientador
 
+Professor Mestre <a href="https://www.linkedin.com/in/diego-negretto-8653a7a2/">Diego Negretto</a>, do curso de Sistemas de Informação pela <a href="[FHO | Fundação Hermínio Ometto (uniararas.br)](http://www.uniararas.br/home.php)">Fundação Hermínio Ometto</a>.
 
 ## Referência
 
- - [O que são as ODS?](https://www.estrategiaods.org.br/o-que-sao-os-ods/)
+ - [O que são as ODS's?](https://www.estrategiaods.org.br/o-que-sao-os-ods/)
