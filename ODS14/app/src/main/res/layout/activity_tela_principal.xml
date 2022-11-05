@@ -37,19 +37,6 @@
         app:layout_constraintVertical_bias="0.946"
         tools:visibility="invisible" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAdicionarProjeto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <TextView
         android:id="@+id/textViewUsuario"
         android:layout_width="wrap_content"
@@ -85,14 +72,14 @@
         android:id="@+id/imageView2"
         android:layout_width="165dp"
         android:layout_height="170dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewConferir"
 
-        app:layout_constraintVertical_bias="0.056"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/projetoconservacaomarinha" />
 
     <ImageView
@@ -104,10 +91,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.056"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cadastrarprojetoconservacaomarinha" />
 
     <TextView
@@ -153,7 +140,7 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.909"
+        app:layout_constraintVertical_bias="0.945"
         app:srcCompat="@drawable/ods" />
 
     <TextView
@@ -170,6 +157,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
 
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.703" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

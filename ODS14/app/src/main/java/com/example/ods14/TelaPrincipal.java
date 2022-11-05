@@ -54,12 +54,14 @@ public class TelaPrincipal extends AppCompatActivity {
 
 
         //Botão abrir tela cadastrar projeto
+        /*
         binding.fabAdicionarProjeto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 abrirTelaProjeto(view);
             }
         });
+        */
     }
 
     @Override

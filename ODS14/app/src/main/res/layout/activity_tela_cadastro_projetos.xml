@@ -9,7 +9,7 @@
 
     <EditText
         android:id="@+id/CidadeProjeto"
-        android:layout_width="349dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
         android:ems="10"
         android:hint="Cidade do projeto"
@@ -19,14 +19,14 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276" />
+        app:layout_constraintVertical_bias="0.279" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/NomeProjeto"
-        android:layout_width="345dp"
+        android:layout_width="350dp"
         android:layout_height="52dp"
         android:hint="Nome do Projeto"
         android:textColor="@color/colorAccentCadastro"
@@ -34,7 +34,6 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.172" />
@@ -48,7 +47,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintVertical_bias="0.834" />
+
 
     <TextView
         android:id="@+id/addprojeto"
@@ -61,14 +61,13 @@
         android:textColorHint="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038"
-        tools:layout_editor_absoluteX="-4dp" />
-
+        app:layout_constraintVertical_bias="0.04" />
 
     <EditText
         android:id="@+id/DescricaoProjeto"
-        android:layout_width="354dp"
+        android:layout_width="350dp"
         android:layout_height="119dp"
         android:ems="10"
         android:hint="Descrição do projeto"
@@ -77,10 +76,10 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.433" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
