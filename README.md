@@ -7,23 +7,26 @@ Aplicativo para o cadastro e a consulta de Projetos de Conservação Marinha, ut
 
 Para instalar nosso projeto, você precisa:
 
-```bash
-  bla bla bla bla
-  bla bla bla bla
-```
+- Clicar <a href="https://github.com/bragabriel/AppMobile-Java.git">aqui</a> para clonar nosso repositório; <br>
+- Importar o projeto dentro do seu Android Studio; <br>
+- Pronto! Basta dar um play e se divertir. <br>
     
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+#### Tela inicial:
+![Tela Inicial](https://user-images.githubusercontent.com/72152596/200093485-3dfa2e2e-d96c-4beb-93e2-7ec5c93992fc.png) <br><br>
+
+#### Home page:
+![Home](https://user-images.githubusercontent.com/72152596/200093495-c5348032-4115-4533-8146-e8158c3f0e38.png)
 
 
 ## Autores
 
-- [@Carlos Augusto](https://github.com/carlostomazin)
-- [@Gabriel Braga](https://github.com/bragabriel)
-- [@Gabriel Lima](https://github.com/Gabriel-Lima232)
-- [@Hérica Cadoni](https://github.com/IamHerica)
-- [@Lucas Delfini](https://github.com/lucas41)
+[@Carlos Augusto](https://github.com/carlostomazin)<br>
+[@Gabriel Braga](https://github.com/bragabriel)<br>
+[@Gabriel Lima](https://github.com/Gabriel-Lima232)<br>
+[@Hérica Cadoni](https://github.com/IamHerica)<br>
+[@Lucas Delfini](https://github.com/lucas41)<br>
 
 ## Orientador
 
