@@ -12,6 +12,7 @@ import model.ProjetosMarinhos;
 
 public class TelaCadastroProjetos extends AppCompatActivity{
 
+    //mesmo esquema de criar um usuario criamos os componentes que serão passados pelo id da aplicação
     private EditText nome_projeto;
     private EditText cidade_projeto;
     private EditText descricao_projeto;
@@ -24,6 +25,7 @@ public class TelaCadastroProjetos extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro_projetos);
 
+        //buscando os ids passados pela actity
         nome_projeto = findViewById(R.id.NomeProjeto);
         cidade_projeto = findViewById(R.id.CidadeProjeto);
         descricao_projeto = findViewById(R.id.DescricaoProjeto);
@@ -37,7 +39,7 @@ public class TelaCadastroProjetos extends AppCompatActivity{
                     if(validaCidadeProjeto()) {
                         if(validaDescricaoProjeto()){
                             projetosMarinhos = new ProjetosMarinhos(nome_projeto.getText().toString(), cidade_projeto.getText().toString(), descricao_projeto.getText().toString());
-                            projetoDAO = new ProjetoDAO(getApplicationContext());
+                            projetoDAO = new ProjetoDAO(getApplicationContext()); //chama o metodo salvar em ProjetoDAO
                             if (projetoDAO.salvar(projetosMarinhos)) {
                                 finish();
                                 Toast.makeText(TelaCadastroProjetos.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();

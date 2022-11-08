@@ -38,7 +38,7 @@ public class TelaLogin extends AppCompatActivity {
                 if(verificaEmail()){
                     if(verificaSenha()){
 
-                        //usuario = encontraUsuario(); Não estamos mais utilizando com lista
+                        usuario = encontraUsuario();
 
                         autenticacao = new AutenticaUsuario();
                         String email = campoEmail.getText().toString();

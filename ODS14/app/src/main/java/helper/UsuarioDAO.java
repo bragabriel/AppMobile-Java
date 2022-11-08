@@ -24,7 +24,7 @@ public class UsuarioDAO implements IUsuarioDAO{
     }
 
     @Override
-    public boolean salvar(Usuario usuario) {
+    public boolean salvar(Usuario usuario) { //metodo salvar que é chamado em telacadastroUsuario para salvar os dados
 
         ContentValues cv = new ContentValues();
         cv.put("nome", usuario.getNome());
@@ -33,7 +33,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 
         try{
             escreve.insert(DBHelper.TABELA_USUARIOS, null, cv);
-            Log.i("INFO", "Usuário salvo com sucesso!");
+            Log.i("INFO", "Usuário salvo com sucesso!"); //add no banco de dados
         }catch (Exception e){
             Log.i("INFO", "Erro ao salvar usuário! " + e.getMessage());
             return false;

@@ -13,6 +13,7 @@ import model.Usuario;
 
 public class TelaCadastroUsuarios extends AppCompatActivity {
 
+    // criando as variaveis para criação de um usuario
     private EditText campoNome;
     private EditText campoEmail;
     private EditText campoSenha;
@@ -24,6 +25,7 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro);
 
+        // atraves do id cadastrado na activity pegando os valores passados
         campoNome = findViewById(R.id.editTextNomeCadastro);
         campoEmail = findViewById(R.id.editTextEmailCadastro);
         campoSenha = findViewById(R.id.editTextSenhaCadastro);
@@ -32,11 +34,11 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(validaNome()){
+                if(validaNome()){ // executando verificações se os dados foram passados corretamente sem estar vazio
                     if(validaEmail()){
                         if(validaSenha()){
-                            usuario = new Usuario();
-                            usuario.setNome(campoNome.getText().toString());
+                            usuario = new Usuario(); // instancia um novo usuario
+                            usuario.setNome(campoNome.getText().toString()); // passa os valores resgatados pelo id para a instancia
                             usuario.setEmail(campoEmail.getText().toString());
                             usuario.setSenha(campoSenha.getText().toString());
 
@@ -47,7 +49,7 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
                             if(cadastrarUsuario()){
                                 //Deu certo
                                 finish();
-                                Toast.makeText(TelaCadastroUsuarios.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TelaCadastroUsuarios.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show(); //informa que foi cadastrado com sucesso
                             }else {
                                 //Não de certo o cadastro
                                 Toast.makeText(TelaCadastroUsuarios.this, "Erro ao realizar cadastro!", Toast.LENGTH_SHORT).show();
@@ -93,7 +95,7 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
         return true;
     }
 
-    public boolean cadastrarUsuario(){
+    public boolean cadastrarUsuario(){ //envia para o banco de dados em usuarioDAO verificar arquivo em /helper/usuarioDAO
 
         usuario = new Usuario();
 
@@ -103,6 +105,6 @@ public class TelaCadastroUsuarios extends AppCompatActivity {
 
         UsuarioDAO usuarioDAO = new UsuarioDAO(getApplicationContext());
 
-        return usuarioDAO.salvar(usuario);
+        return usuarioDAO.salvar(usuario); //chama o metodo salvar em usuarioDAO verificar o arquivo
     }
 }

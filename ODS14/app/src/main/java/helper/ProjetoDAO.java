@@ -25,7 +25,7 @@ public class ProjetoDAO implements IProjetoDAO {
     }
 
     @Override
-    public boolean salvar(ProjetosMarinhos projeto) {
+    public boolean salvar(ProjetosMarinhos projeto) { //metodo que salva os arquivos passados pelo cadastroProjeto
 
         ContentValues cv = new ContentValues();
         cv.put("nome", projeto.getNome());

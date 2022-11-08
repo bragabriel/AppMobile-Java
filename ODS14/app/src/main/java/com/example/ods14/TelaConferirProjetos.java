@@ -62,22 +62,5 @@ public class TelaConferirProjetos extends AppCompatActivity {
 
     }
 
-    public void criarProjetosMarinhos(){
 
-        ProjetosMarinhos projeto = new ProjetosMarinhos("Projeto Tamar", "1988", "Ubatuba, SP");
-        listaProjetosMarinhos.add(projeto);
-
-        ProjetosMarinhos projeto2 = new ProjetosMarinhos("Projeto Verde Mar", "2014", "Rio de Janeiro, RJ");
-        listaProjetosMarinhos.add(projeto2);
-
-        ProjetosMarinhos projeto3 = new ProjetosMarinhos("Projeto Albatroz", "2013", "Ubatuba, SP");
-        listaProjetosMarinhos.add(projeto3);
-
-        ProjetosMarinhos projeto4 = new ProjetosMarinhos("Projeto Pescador Amigo", "2008", "São Paulo, Bertioga, Garujá e Santos");
-        listaProjetosMarinhos.add(projeto4);
-
-        ProjetosMarinhos projeto5 = new ProjetosMarinhos("Projeto Ecosurf", "2000", "Rio Grande do Sul, RS");
-        listaProjetosMarinhos.add(projeto5);
-
-    }
 }
