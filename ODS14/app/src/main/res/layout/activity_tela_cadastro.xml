@@ -40,9 +40,12 @@
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPersonName"
+        android:password="true"
         app:layout_constraintBottom_toTopOf="@+id/buttonCadastrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorAccent"/>
 
     <EditText
         android:id="@+id/editTextEmailCadastro"
@@ -52,9 +55,8 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextSenhaCadastro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextSenhaCadastro" />
+
 
     <EditText
         android:id="@+id/editTextNomeCadastro"
